@@ -14,8 +14,14 @@ User user2=new User();
 user2.getName="ankit";
 user2.getcity="city2";
 user2.getstatus="java";
+  //Single entity
 UserResult user=UserRepository.save(user);
 System.out.println("save user"+resultUser);
 System.out.println("done");
+  //Multiple entity
+  iterable<user>result=userRepository.saveall(Users);
+  result for each(user->{System.outprintln(user);});
+  System.out.println("done");
+  
 }
 }
